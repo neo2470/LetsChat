@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.alex.develop.androidstart"
+        applicationId "com.alex.develop.letschat"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1

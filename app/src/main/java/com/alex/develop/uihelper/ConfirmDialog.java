@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.alex.develop.androidstart.R;
+import com.alex.develop.letschat.R;
 
 /**
  * 信息确认Dialog，包含标题Title（非普通Dialog的Title）、确认信息

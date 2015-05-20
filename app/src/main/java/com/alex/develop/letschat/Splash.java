@@ -1,7 +1,6 @@
-package com.alex.develop.androidstart;
+package com.alex.develop.letschat;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -53,14 +52,14 @@ public class Splash extends BaseActivity {
 	 */
 	private boolean isFirstLaunch() {
 		
-		String preferFiles = getPackageName() + getString(R.string.app_info_file);
-		SharedPreferences prefer = getSharedPreferences(preferFiles, Context.MODE_PRIVATE);
-		
-		boolean firstLaunch = prefer.getBoolean(getString(R.string.key_is_first_launch), true);
+		String preferFiles = getPackageName();
+		SharedPreferences prefer = getSharedPreferences(preferFiles, MODE_PRIVATE);
+
+		boolean firstLaunch = prefer.getBoolean(getString(R.string.key_first_launch), true);
 		
 		if(firstLaunch) {
 			SharedPreferences.Editor editor = prefer.edit();
-			editor.putBoolean(getString(R.string.key_is_first_launch), false);
+			editor.putBoolean(getString(R.string.key_first_launch), false);
 			editor.commit();
 		}
 		

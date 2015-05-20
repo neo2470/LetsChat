@@ -1,6 +1,6 @@
 package com.alex.develop.adapter;
 
-import com.alex.develop.androidstart.R;
+import com.alex.develop.letschat.R;
 
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;

@@ -31,4 +31,12 @@
     <!-- BaseActivity.java -->
     <string name="back_twice_to_exit">BACK AGAIN TO EXIT APP</string>
 
+    <!-- login_fragment.xml -->
+    <string name="usr_name">Account</string>
+    <string name="usr_password">Password</string>
+    <string name="login_btn">Login</string>
+
+    <!-- LoginFragment.java -->
+    <string name="login_failure">Account or password is incorrect</string>
+
 </resources>

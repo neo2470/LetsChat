@@ -1,4 +1,4 @@
-package com.alex.develop.androidstart;
+package com.alex.develop.letschat;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

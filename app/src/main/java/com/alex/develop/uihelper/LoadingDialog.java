@@ -1,6 +1,6 @@
 package com.alex.develop.uihelper;
 
-import com.alex.develop.androidstart.R;
+import com.alex.develop.letschat.R;
 
 import android.app.Dialog;
 import android.content.Context;

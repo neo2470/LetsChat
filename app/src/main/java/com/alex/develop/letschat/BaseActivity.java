@@ -1,8 +1,9 @@
-package com.alex.develop.androidstart;
+package com.alex.develop.letschat;
 
 import java.util.Calendar;
 
 
+import com.alex.develop.letschat.R;
 import com.alex.develop.settings.Remote;
 import com.alex.develop.uihelper.ConfirmDialog;
 import com.alex.develop.uihelper.ConfirmDialog.OnConfirmListener;
@@ -196,8 +197,11 @@ public class BaseActivity extends FragmentActivity {
 		// 创建LoadingDialog
 		loadingDialog = new ProgressDialog(this);
 		loadingDialog.setCancelable(false);
+
+		LAYOUT_CONTENT_ID = android.R.id.content;
 	}
 
+	protected int LAYOUT_CONTENT_ID;
 	protected ProgressDialog loadingDialog;// 加载数据Dialog，不可取消，加载完成后dismiss即可
 	protected PackageInfo pkgInfo;// App的Package信息
 	private boolean backTwice2Exit;// 是否Back2次退出App
