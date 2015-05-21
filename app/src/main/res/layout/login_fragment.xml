@@ -2,37 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:gravity="center">
+    android:padding="10dp">
 
     <ImageView
+        android:id="@+id/usrAvator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/usrAvator"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        android:src="@mipmap/ic_launcher" />
 
     <EditText
         android:id="@+id/usrName"
+        style="@style/LoginEditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/usr_name"
-        style="@style/LoginEditTextStyle"
-        android:inputType="text"/>
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/usrPassword"
+        style="@style/LoginEditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:hint="@string/usr_password"
-        style="@style/LoginEditTextStyle"/>
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login_btn"/>
+        android:text="@string/login_btn" />
 
 </LinearLayout>

@@ -45,8 +45,17 @@ public class User extends BaseObject {
         this.groups = groups;
     }
 
+    public List<User> getRecents() {
+        return recents;
+    }
+
+    public void setRecents(List<User> recents) {
+        this.recents = recents;
+    }
+
     private String usrId;// 用户ID
     private String usrName;// 用户昵称
     private String usrPassword;// 用户密码(加密)
-    private List<Group> groups;
+    private List<Group> groups;// 用户分组
+    private List<User> recents;// 用户的近期联系人
 }

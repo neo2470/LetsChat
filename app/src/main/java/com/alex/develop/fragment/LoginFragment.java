@@ -16,7 +16,7 @@ import com.alex.develop.letschat.R;
 
 /**
  * Created by alex on 15-5-20.
- *
+ * 用户登录界面处理
  */
 public class LoginFragment extends BaseFragment {
 
@@ -53,7 +53,7 @@ public class LoginFragment extends BaseFragment {
                     editor.putString(act.getString(R.string.key_login_user), usrNm);
                     editor.commit();
 
-                    act.go2FriendsListView();
+                    act.go2RecentView();
                 } else {
                     Toast.makeText(act, act.getString(R.string.login_failure), Toast.LENGTH_SHORT).show();
                 }

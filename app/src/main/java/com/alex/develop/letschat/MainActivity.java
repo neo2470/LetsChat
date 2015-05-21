@@ -5,8 +5,9 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.alex.develop.entity.Group;
 import com.alex.develop.entity.User;
-import com.alex.develop.fragment.ContactsFragment;
+import com.alex.develop.fragment.ContactFragment;
 import com.alex.develop.fragment.LoginFragment;
+import com.alex.develop.fragment.RecentFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +22,9 @@ public class MainActivity extends BaseActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		changeThemeByTime();
+        setContentView(R.layout.main_activity);
 
         initialize();
-
         go2LoginView();
 	}
 
@@ -34,13 +35,21 @@ public class MainActivity extends BaseActivity{
         transaction.commit();
     }
 
-    //好友列表
-    public void go2FriendsListView() {
+    //近期联系人界面
+    public void go2RecentView() {
         FragmentTransaction transaction = getTransaction();
-        transaction.replace(LAYOUT_CONTENT_ID, new ContactsFragment());
+        transaction.replace(LAYOUT_CONTENT_ID, new RecentFragment());
+        transaction.commit();
+    }
+
+    //联系人列表
+    public void go2ContactView() {
+        FragmentTransaction transaction = getTransaction();
+        transaction.replace(LAYOUT_CONTENT_ID, new ContactFragment());
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 
     //聊天室
     public void go2ChatView() {
@@ -73,6 +82,14 @@ public class MainActivity extends BaseActivity{
         }
         usr.setGroups(groups);
 
+        List<User> recent = new ArrayList();
+        for(int i=0; i<50; ++i) {
+            String uId = i+"";
+            String uName = "User-"+uId;
+            recent.add(new User(uId, uName, ""));
+        }
+        usr.setRecents(recent);
+
         return usr;
     }
 
@@ -81,5 +98,6 @@ public class MainActivity extends BaseActivity{
 
     }
 
+    private final int LAYOUT_CONTENT_ID = R.id.content;
     private User usr;// 当前用户
 }
